@@ -4,7 +4,7 @@ const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin'
 
 const devServer = {
   historyApiFallback: true,
-  open: true,
+  open: false,
   hot: true,
   compress: true,
   allowedHosts: 'all',
