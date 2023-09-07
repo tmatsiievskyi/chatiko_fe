@@ -10,13 +10,13 @@ export const Text = ({
 }: ITextProps) => {
   const Tag = as;
 
-  const variants: { [key in ITextProps['variant']]: string } = {
+  const variants: { [key in ITextProps['variant'] as string]: string } = {
     dark: 'text-dark',
     light: 'text-light',
     primary: 'text-primary',
   };
 
-  const sizes: { [key in ITextProps['size']]: string } = {
+  const sizes: { [key in ITextProps['size'] as string]: string } = {
     xs: 'font-medium text-xs leading-normal',
     sm: 'font-medium text-sm leading-normal',
     base: 'font-medium text-base leading-normal',
