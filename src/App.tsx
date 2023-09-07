@@ -1,12 +1,7 @@
-import { Button } from './UI';
+import { useRoutes } from 'react-router-dom';
+import { routes } from '@/global/router';
 
 export const App = () => {
-  return (
-    <div>
-      <p className="text-xl font-bold underline text-dark">App page</p>
-      <Button size="base" type="danger">
-        Hello1
-      </Button>
-    </div>
-  );
+  const content = useRoutes(routes);
+  return <>{content}</>;
 };

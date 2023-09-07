@@ -21,14 +21,12 @@
     "sourceMap": true,
     "noImplicitReturns": true,
     "noImplicitAny": true,
-    "baseUrl": "./src",
     "paths": {
       "@/*": ["./src/*"],
-      "@/components/*": ["./components/*"],
-      "@/UI/*": ["./UI/*"],
-      "@/modules/*": ["./modules/*"],
-      "@/global/*": ["./global/*"],
-      "@/pages/*": ["./pages/*"]
+      "@/UI/*": ["./src/UI/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "@/global/*": ["./src/global/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],

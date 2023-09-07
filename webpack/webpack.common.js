@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FileManagerPlugin = require('filemanager-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const TsconfigPathsWebpackPlugin = require('tsconfig-paths-webpack-plugin');
 
 const ROOT_DIR = path.join(__dirname, '..');
 const ENTRY_DIR = path.join(__dirname, '..', 'src');
@@ -20,6 +21,15 @@ module.exports = (envVars) => {
     },
     resolve: {
       extensions: ['.tsx', '.ts', '.js'],
+      plugins: [
+        new TsconfigPathsWebpackPlugin({
+          configFile: path.resolve(ROOT_DIR, './tsconfig.json'),
+          extensions: ['.ts', '.tsx', '.js'],
+          logLevel: 'INFO',
+          baseUrl: path.resolve(ROOT_DIR),
+          mainFields: ['browser', 'main'],
+        }),
+      ],
     },
     module: {
       rules: [
